@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:gravity="center"
+    tools:context=".Booking">
+
+    <TextView
+        android:id="@+id/textViewNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textViewNama"
+        android:layout_marginStart="8dp"
+        android:hint="Masukkan nama"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textViewTanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNama"
+        android:layout_marginTop="16dp"
+        android:text="Tanggal:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextTanggal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNama"
+        android:layout_toRightOf="@id/textViewTanggal"
+        android:layout_marginStart="8dp"
+        android:hint="Pilih tanggal"
+        android:focusable="false" />
+
+    <TextView
+        android:id="@+id/textViewJudulFilm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTanggal"
+        android:layout_marginTop="16dp"
+        android:text="Judul Film:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextJudulFilm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTanggal"
+        android:layout_toRightOf="@id/textViewJudulFilm"
+        android:layout_marginStart="8dp"
+        android:hint="Masukkan judul film"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/textViewNoTeater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextJudulFilm"
+        android:layout_marginTop="16dp"
+        android:text="Nomor Teater:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextNoTeater"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextJudulFilm"
+        android:layout_toRightOf="@id/textViewNoTeater"
+        android:layout_marginStart="8dp"
+        android:hint="Masukkan nomor teater"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textViewNoKursi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNoTeater"
+        android:layout_marginTop="16dp"
+        android:text="Nomor Kursi:"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/chairCodeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNoTeater"
+        android:layout_toRightOf="@id/textViewNoKursi"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/rowSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:prompt="@string/select_row" />
+
+        <Spinner
+            android:id="@+id/columnSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:prompt="@string/select_column" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonBooking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chairCodeLayout"
+        android:layout_marginTop="24dp"
+        android:text="Pesan" />
+
+</RelativeLayout>
